@@ -13,6 +13,7 @@ config.email.auth.user = '';
 config.email.auth.pass = '';
 
 config.muellshack = {};
+config.muellshack.send_to = '"Mitgliedermailingliste shack e.V." <mitglieder@lists.shackspace.de>';
 config.muellshack.url = 'http://openhab.shack/muellshack/';
 config.muellshack.types = ['gelber_sack', 'papiermuell', 'restmuell'];
 

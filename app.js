@@ -69,7 +69,7 @@ function checkSendEmail(muelltype) {
     // create reusable transporter object using the default SMTP transport
     var transporter = nodemailer.createTransport(config.email);
 
-    var mailOptions = mail_message.get_mail_options(muelltype, muellstorage[muelltype].date);
+    var mailOptions = mail_message.get_mail_options(muelltype, muellstorage[muelltype].date,config.muellshack.send_to);
 
     // send mail with defined transport object
     transporter.sendMail(mailOptions, function(error, info){
@@ -83,7 +83,6 @@ function checkSendEmail(muelltype) {
         data: {mail_sended: true},
         headers: { "Content-Type": "application/json" }
       };
-
       client.post(config.muellshack.url + muelltype, args, function (data, response) {
         // parsed response body as js object
         console.log('POST {mail_sended: true}');
