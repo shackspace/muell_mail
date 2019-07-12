@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "bin": "app.js",
   "dependencies": {
     "chai": "^3.5.0",
     "datejs": "^1.0.0-rc3",
