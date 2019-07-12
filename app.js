@@ -3,7 +3,9 @@ var nodemailer = require('nodemailer');
 var Client = require('node-rest-client').Client;
 var client = new Client();
 var mail_message = require('./lib/mail-message');
-var config = require(process.env.CONFIG || './config');
+var cfgfile = process.env.CONFIG || './config';
+console.log('Loading config from ' + cfgfile);
+var config = require(cfgfile);
 var cron = require('node-cron');
 
 
@@ -45,11 +47,12 @@ function checkSendEmail(muelltype) {
   //  max_limit.setHours(18,46);
 
 
-  console.log(dat_limit);
-  console.log(min_limit);
-  console.log(max_limit);
+  console.log('Handling: ' + muelltype);
+  console.log(dat_limit + ' (collection)');
+  console.log(min_limit + ' (earliest)');
+  console.log(max_limit +' (latest)');
 
-  console.log(new Date());
+  console.log((new Date()) + ' (current)');
   if (min_limit < new Date() && max_limit > new Date())
   {
     console.log('Mail senden')
