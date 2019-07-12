@@ -1,0 +1,23 @@
+{
+  "name": "muell_mail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "datejs": "^1.0.0-rc3",
+    "intl": "^1.2.4",
+    "jshint": "^2.9.3",
+    "mocha": "^3.0.2",
+    "moment": "^2.14.1",
+    "node-cron": "^1.1.1",
+    "node-rest-client": "^2.0.1",
+    "nodemailer": "^2.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
